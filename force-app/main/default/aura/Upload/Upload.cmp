@@ -1,0 +1,15 @@
+<aura:component>
+    <aura:attribute name="title" type="String" default="" />
+    <aura:attribute name="contents" type="String" default="" />
+
+    <div>
+        <div style="width: 88%; margin-left: 6%;">
+            <div class="slds-m-top_medium" style="font-size: 1.5rem; font-weight: bolder;">게시글 작성</div>
+            <lightning:input class="slds-m-bottom_small" placeholder="제목을 입력하세요" value="{! v.title }" />
+            <lightning:inputRichText class="contentBox slds-m-bottom_small" placeholder="내용을 입력하세요" value="{! v.contents }" />
+            <div style="width: 100%; display: flex; justify-content: flex-end;">
+                <lightning:button label="Submit" variant="brand"/>
+            </div>
+        </div>
+    </div>
+</aura:component>

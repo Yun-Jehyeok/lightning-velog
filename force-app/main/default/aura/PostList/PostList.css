@@ -1,0 +1,12 @@
+.THIS {
+    margin-top: 2rem;
+}
+
+.THIS .slds-card {
+    transition: all 0.25s linear;
+}
+
+.THIS .slds-card:hover {
+    margin-top: -10px;
+}
+

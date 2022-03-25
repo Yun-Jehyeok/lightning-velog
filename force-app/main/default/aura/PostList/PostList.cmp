@@ -1,0 +1,9 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <div>
+        <div class="slds-grid slds-gutters slds-wrap" style="width: 90%; margin-left: 5%; padding: 0;">
+            <aura:iteration items="1, 2, 3, 4, 5, 6" var="item">
+                <c:PostItem />
+            </aura:iteration>
+        </div>
+    </div>
+</aura:component>	

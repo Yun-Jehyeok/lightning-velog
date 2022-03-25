@@ -1,0 +1,55 @@
+<aura:component controller="authController" implements="force:appHostable, forceCommunity:availableForAllPageTypes" access="global">
+    <aura:registerEvent name="Store" type="c:store" />
+    <aura:attribute name="email" type="String" default="" />
+    <aura:attribute name="password" type="String" default="" />
+    <aura:attribute name="isLogin" type="Boolean" default="false" />
+
+    <div>
+        <div class="wrap">
+            <div class="container">
+                <div class="left">
+                    <img src="{!$Resource.signInImg}" style="width: 100%; height: 100%;" />
+                </div>
+                <div class="right">
+                    <aura:if isTrue="{! v.isLogin }">
+                        <div style="text-align: center;">
+                            <div>로그인에 성공했습니다.</div>
+                            <a href="/c/MainPage.app" style="text-decoration: none;">홈으로 가기</a>
+                        </div>
+                        <aura:set attribute="else">
+                            <div>
+                                <div class="title">
+                                    <a href="/c/MainPage.app">Sign In</a>
+                                </div>
+                                <form>
+                                    <div class="slds-form-element__control email-input">
+                                        <lightning:input type="text" label="Email" placeholder="Input your Email" value="{!v.email}" />
+                                    </div>
+                                    <div class="slds-form-element__control">
+                                        <lightning:input type="password" label="Password" placeholder="Input your Password" value="{!v.password}" />
+                                    </div>
+                                    <button class="login-button" onclick="{! c.onSubmit }">Login</button>
+                                </form>
+                                <div class="navigate-to-find-password">
+                                    <span>
+                                        <a href="#">
+                                            Forgot a Password?
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="navigate-to-signup">
+                                    <span>Not a Member?&nbsp;&nbsp;</span>
+                                    <span>
+                                        <a href="/c/SignUpPage.app">
+                                            Sign Up
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

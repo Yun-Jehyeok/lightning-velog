@@ -1,0 +1,57 @@
+<aura:component>
+    <aura:attribute name="content" type="String" default="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+    <div>
+        <div class="slds-grid" style="color: black; margin-top: 4rem;">
+            <div class="slds-col slds-size_1-of-4"></div>
+            
+            <div class="slds-col slds-size_2-of-4">
+                <div class="slds-m-bottom_x-large" style="font-size: 3rem; font-weight: bolder;">Salesforce 개발자로 인생살기</div>
+                <div class="slds-m-bottom_small" style="font-size: 1rem;"><b>Jehyeok</b> · 6일 전</div>
+                <button class="slds-button slds-button_neutral slds-m-bottom_large" style="background-color: #F8F9FA; border: none; border-radius: 4rem;">Category</button>
+                <div class="slds-border_bottom" style="font-size: 1rem; padding-bottom: 15rem; border-color: #E9ECEF;">
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <br/>
+                    <br/>
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <lightning:formattedRichText value="{!v.content}" />
+                    <lightning:formattedRichText value="{!v.content}" />
+
+                </div>
+                <div class="slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <div class="slds-m-bottom_medium" style="font-size: 1.2rem; font-weight: bold;">5개의 댓글</div>
+                    <input class="slds-input" placeholder="댓글을 작성하세요" />
+                </div>
+            </div>
+            
+            <div class="slds-col slds-size_1-of-4" style="height: 75vh; position: fixed; right: 3rem;">
+                <div class="slds-panel slds-m-right_xx-large slds-size_small slds-panel_docked slds-panel_docked-right slds-is-open" aria-hidden="false" style="box-shadow: none; border: none; border-left: 2px solid #F1F3F5; border-right: 2px solid black;">
+                    <div class="slds-panel__body" style="color: #868E96; font-size: 1rem;">
+                        <div>Lorem Ipsum is simply dummy text</div>
+                        <div>Lorem Ipsum is simply dummy text</div>
+                        <div>Lorem Ipsum is simply dummy text</div>
+                        <div>Lorem Ipsum is simply dummy text</div>
+                        <div>Lorem Ipsum is simply dummy text</div>
+                        <div>Lorem Ipsum is simply dummy text</div>
+                        <div>Lorem Ipsum is simply dummy text</div>
+                        <div>Lorem Ipsum is simply dummy text</div>
+                        <div>Lorem Ipsum is simply dummy text</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>	

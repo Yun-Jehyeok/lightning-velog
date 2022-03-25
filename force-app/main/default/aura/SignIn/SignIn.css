@@ -1,0 +1,73 @@
+.THIS {
+}
+
+.THIS .wrap {
+    width: 100%; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    flex: 0 0 auto; 
+    align-items: center; 
+    background-color: #F8F9FA;
+}
+
+.THIS .container {
+    width: 50%; 
+    height: 60%; 
+    background-color: white; 
+    border-radius: 0.25rem; 
+    display: flex; 
+    box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0;
+}
+
+.THIS .left {
+    width: 40%; 
+    height: 100%;
+}
+
+.THIS .right {
+    width: 60%; 
+    display: flex; 
+    justify-content: center; 
+    flex: 0 0 auto; 
+    align-items: center;
+}
+
+.THIS .right > div {
+    width: 70%;
+}
+
+.THIS .title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.THIS .title > a {
+    font-size: 1.6rem; 
+    font-weight: bolder; 
+    color: black; 
+    text-decoration: none;
+}
+
+.THIS .email-input {
+    margin-bottom: 0.3rem;
+}
+
+.THIS .login-button {
+    width: 100%; 
+    background-color: #1990ff; 
+    border: none; 
+    margin: 1rem 0 1.5rem 0; 
+    color: white; 
+    padding: 0.5rem 1.5rem; 
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.THIS .navigate-to-find-password {
+    text-align: center; 
+    margin-bottom: 0.4rem;
+}
+
+.THIS .navigate-to-signup {
+    text-align: center;
+}

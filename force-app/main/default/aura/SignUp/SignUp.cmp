@@ -1,0 +1,59 @@
+<aura:component controller="authController" implements="force:appHostable, forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="name" type="String" default="" />
+    <aura:attribute name="email" type="String" default="" />
+    <aura:attribute name="password" type="String" default="" />
+    <aura:attribute name="passwordCheck" type="String" default="" />
+    <aura:attribute name="authNum" type="String" default="" />
+    <aura:attribute name="inputAuthNum" type="String" default="" />
+    <aura:attribute name="isSend" type="Boolean" default="false" />
+    <aura:attribute name="isAuthSuccess" type="Boolean" default="true" />
+    <aura:attribute name="isRegisterSuccess" type="Boolean" default="false" />
+    
+    <div>
+        <div class="wrap">
+            <div class="container">
+                <div class="left">
+                    <img src="{!$Resource.signInImg}" />
+                </div>
+                <div class="right">
+                    <aura:if isTrue="{! v.isRegisterSuccess }">
+                        <div style="text-align: center;">
+                            <div>회원가입에 성공했습니다.</div>
+                            <a href="/c/SignInPage.app" style="text-decoration: none;">로그인하러 가기</a>
+                        </div>
+                        <aura:set attribute="else">
+                            <div>
+                                <div class="title">
+                                    <a href="/c/MainPage.app">Sign Up</a>
+                                </div>
+                                <form>
+                                    <div class="value-input">
+                                        <lightning:input type="text" label="Name" placeholder="Input your Name" value="{!v.name}" />
+                                    </div>
+                                    <div class="email-input">
+                                        <lightning:input type="email" label="Email" placeholder="Input your Email" value="{!v.email}" style="width: 63%;" />
+                                        <button class="auth-button" onclick="{!c.sendMail}">Authentication</button>
+                                    </div>
+                                    <aura:if isTrue="{!v.isSend}">
+                                        <div class="authNum-input">
+                                            <lightning:input type="text" placeholder="Authentication Number" variant="label-hidden" value="{!v.inputAuthNum}" style="width: 78%;" />
+                                            <button class="check-button" onclick="{!c.checkAuthNumber}">Check</button>
+                                        </div>
+                                    </aura:if>
+                                    <div class="value-input">
+                                        <lightning:input type="password" label="Password" placeholder="Input your Password" value="{!v.password}" />
+                                    </div>
+                                    <div>
+                                        <lightning:input type="password" label="Password Check" placeholder="Input your Password Check" value="{!v.passwordCheck}" />
+                                    </div>
+                                    <button class="register" onclick="{!c.onSubmit}">Register</button>
+                                </form>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

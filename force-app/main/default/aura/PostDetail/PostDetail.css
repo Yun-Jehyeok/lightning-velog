@@ -1,0 +1,14 @@
+.THIS {
+}
+
+.THIS .slds-panel__body > div {
+    cursor: pointer;
+}
+
+.THIS .slds-panel__body > div:hover {
+    color: black;
+}
+
+.THIS .slds-input {
+    --slds-c-input-color-border: #F1F3F5;
+}

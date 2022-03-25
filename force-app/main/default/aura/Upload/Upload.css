@@ -1,0 +1,6 @@
+.THIS {
+}
+
+.THIS .contentBox {
+    --sds-c-textarea-sizing-min-height: 400px;
+}

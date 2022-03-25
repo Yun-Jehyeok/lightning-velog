@@ -1,0 +1,62 @@
+.THIS {
+}
+
+.THIS article.slds-card {
+    cursor: pointer; 
+    box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0; 
+    border: 0;
+}
+
+.THIS div.slds-card__body {
+    padding: 0; 
+    margin: 0; 
+    border-bottom: 1px solid #F1F3F5;
+}
+
+.THIS div.slds-card__body > img {
+    width: 100%;
+    height: auto; 
+    border-radius: 0.125rem 0.125rem 0 0; 
+    margin-top: -0.5px;
+}
+
+.THIS div.content-container {
+    padding: 1rem;
+}
+
+.THIS .title {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.THIS .date-comment {
+    color: #868E96; 
+    font-size: 0.75rem; 
+    margin-top: 2rem; 
+    display: flex;
+}
+
+.THIS .date-comment > div:nth-child(2) {
+    margin: 0 0.25rem;
+}
+
+.THIS footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.THIS .user {
+    display: flex;
+    width: 50%;
+}
+
+.THIS .user > img {
+    border-radius: 70%;
+}
+
+.THIS .user > div {
+    margin-left: 0.25rem;
+}
