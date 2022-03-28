@@ -1,4 +1,5 @@
 <aura:event type="APPLICATION" description="Event template">
     <aura:attribute name="userName" type="String" default="" />
     <aura:attribute name="userEmail" type="String" default="" />
+    <aura:attribute name="userId" type="String" default="" />
 </aura:event>

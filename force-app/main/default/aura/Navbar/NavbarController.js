@@ -1,4 +1,9 @@
 ({
+    initValue: function(component, event) {
+        component.set("v.userName", event.getParam("userName"));
+
+        // 서로 다른 Application이라 안되는듯...
+    },
     openDropdown: function(component) {
         var item = component.get("v.isDropdownOpen");
 
@@ -7,7 +12,6 @@
     onLogout: function(component) {
         component.set("v.isLogin", false);
 
-        // 원래는 이거...
-        // localStorage.removeItem("access-token");
+        localStorage.removeItem(localStorage.key(2));
     }
 })

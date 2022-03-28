@@ -1,8 +1,10 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+<aura:component controller="postController" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="posts" type="List" default="[]" />
+    <aura:handler name="init" value="{! this }" action="{! c.myInit }" />
     <div>
         <div class="slds-grid slds-gutters slds-wrap" style="width: 90%; margin-left: 5%; padding: 0;">
-            <aura:iteration items="1, 2, 3, 4, 5, 6" var="item">
-                <c:PostItem />
+            <aura:iteration items="{! v.posts }" var="item">
+                <c:PostItem post="{! item }" />
             </aura:iteration>
         </div>
     </div>

@@ -4,6 +4,8 @@
     <aura:attribute name="password" type="String" default="" />
     <aura:attribute name="isLogin" type="Boolean" default="false" />
 
+    <aura:handler name="init" value="{!this}" action="{!c.initTest}" />
+
     <div>
         <div class="wrap">
             <div class="container">

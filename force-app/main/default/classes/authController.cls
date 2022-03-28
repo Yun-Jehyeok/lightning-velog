@@ -26,7 +26,7 @@ public with sharing class authController {
         try {
             map<string, Object> result = new map<string, Object>();
 
-            Account[] user = [SELECT Email__c, Password__c, Name FROM Account WHERE Email__c=:email];
+            Account[] user = [SELECT Id, Email__c, Password__c, Name FROM Account WHERE Email__c=:email];
 
             if(user.size() <= 0) {
                 result.put('isLogin', 'fail');
@@ -41,6 +41,7 @@ public with sharing class authController {
                     result.put('msg', '로그인 되었습니다');
                     result.put('name', user[0].Name);
                     result.put('email', user[0].Email__c);
+                    result.put('userId', user[0].Id);
                     
                     return result;
                 } else {

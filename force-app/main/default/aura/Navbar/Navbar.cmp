@@ -1,7 +1,10 @@
 <aura:component implements="force:appHostable, forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="isScrollUp" type="Boolean" default="false" />
-    <aura:attribute name="isLogin" type="Boolean" default="true" />
+    <aura:attribute name="isLogin" type="Boolean" default="false" />
     <aura:attribute name="isDropdownOpen" type="Boolean" default="false" />
+    <aura:attribute name="userName" type="String" default="이름이 없습니다" />
+
+    <aura:handler event="c:store" action="{! c.initValue }" />
 
     <div>
         <div class="container">

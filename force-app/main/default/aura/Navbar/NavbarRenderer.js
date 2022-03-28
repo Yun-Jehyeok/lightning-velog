@@ -22,10 +22,9 @@
             beforePosition = afterPosition;
         })
 
-        var token = window.localStorage.getItem("2");
+        var token = window.localStorage.getItem(localStorage.key(2));
 
         if(token) {
-            console.log("here");
             component.set("v.isLogin", true);
         }
     }

@@ -23,12 +23,17 @@
                 localStorage.setItem("access-token", "dummy-token")
 
                 var appEvent = $A.get("e.c:store");
-                appEvent.setParams({ userName: response.name, userEmail: response.email });
+
+                appEvent.setParams({ userName: response.name, userEmail: response.email, userId: response.userId });
             } else {
                 // component.find().focus();
             }
         })
 
         $A.enqueueAction(action);
+    },
+    initTest: function(component) {
+        console.log('inittest')
+        localStorage.setItem("real-access-token", "realreal")
     }
 })
