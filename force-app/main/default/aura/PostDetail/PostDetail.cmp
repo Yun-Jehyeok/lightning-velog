@@ -5,65 +5,65 @@
 
     <aura:handler name="init" value="{! this }" action="{! c.myInit }" />
     <div>
-        <div class="slds-grid" style="color: black; margin-top: 4rem; display: flex; justify-content: center;">
+        <div class="slds-grid">
             <div class="slds-col slds-size_2-of-4">
-                <div class="slds-m-bottom_x-large" style="font-size: 3rem; font-weight: bolder;">{! v.post.Name }</div>
-                <div class="slds-m-bottom_xx-large" style="font-size: 1rem;"><b>{! v.post.CreatorName__c }</b> · <span style="color: gray;">{! v.post.CurrentDate__c }</span></div>
-                <div class="slds-border_bottom" style="font-size: 1rem; padding-bottom: 5rem; border-color: #E9ECEF;">
+                <div class="title slds-m-bottom_x-large">{! v.post.Name }</div>
+                <div class="creator-name slds-m-bottom_xx-large"><b>{! v.post.CreatorName__c }</b> · <span class="created-date">{! v.post.CurrentDate__c }</span></div>
+                <div class="section-contents slds-border_bottom">
                     <lightning:formattedRichText value="{!v.post.Contents__c}" />
                     <aura:if isTrue="{! v.post.CreatorId__c == v.userId }">
-                        <div style="display: flex; justify-content: flex-end;">
+                        <div class="button-container">
                             <!-- 아직 수정 안만들었음 -->
-                            <div class="slds-m-right_x-small" style="cursor: pointer;">수정</div>
-                            <div style="cursor: pointer;" onclick="{! c.onDeletePost }">삭제</div>
+                            <div class="slds-m-right_x-small">수정</div>
+                            <div onclick="{! c.onDeletePost }">삭제</div>
                         </div>
                     </aura:if>
                 </div>
                 
                 <div class="slds-m-top_x-large slds-m-bottom_medium">
-                    <div class="slds-m-bottom_medium" style="font-size: 1.2rem; font-weight: bold;">5개의 댓글</div>
-                    <input class="slds-input slds-m-bottom_medium" placeholder="댓글을 작성하세요" style="height: 3rem;" />
-                    <div style="width: 100%; display: flex; justify-content: flex-end;">
-                        <button class="slds-button slds-button_success" style="color: white; font-weight: 600;">댓글 작성</button>
+                    <div class="comment-label slds-m-bottom_medium">5개의 댓글</div>
+                    <input class="slds-input slds-m-bottom_medium" placeholder="댓글을 작성하세요" />
+                    <div class="comment-button">
+                        <button class="slds-button slds-button_success">댓글 작성</button>
                     </div>
                 </div>
                 <div class="slds-m-top_xx-large slds-m-bottom_xx-large slds-p-bottom_xx-large">
                     <!-- 댓글 아이템들 -->
-                    <div class="slds-border_bottom slds-p-bottom_large slds-p-top_x-large" style="border-color: #E9ECEF;">
-                        <div class="slds-m-bottom_large" style="display: flex;">
-                            <div><img src="https://placeimg.com/48/48/people" style="border-radius: 70%;" /></div>
+                    <div class="comment-item-container slds-border_bottom slds-p-bottom_large slds-p-top_x-large">
+                        <div class="slds-m-bottom_large">
+                            <div><img class="comment-user-img" src="https://placeimg.com/48/48/people" /></div>
                             <div class="slds-m-left_medium">
-                                <div style="font-size: 1.3rem; font-weight: bold;">{! v.post.CreatorName__c }</div>
+                                <div class="comment-creator">{! v.post.CreatorName__c }</div>
                                 <div>{! v.post.CurrentDate__c }</div>
                             </div>
                         </div>
-                        <div style="font-size: 1.2rem;">간단 명료하면서도 심플한 포트폴리오네요!!
+                        <div class="comment-contents">간단 명료하면서도 심플한 포트폴리오네요!!
                             애니메이션도 바로바로 응답해줘서 보는 내내 흥미로웠어요
                             참고가 됬습니다ㅎㅎ 😊
                         </div>
                     </div>
-                    <div class="slds-border_bottom slds-p-bottom_large slds-p-top_x-large" style="border-color: #E9ECEF;">
-                        <div class="slds-m-bottom_large" style="display: flex;">
-                            <div><img src="https://placeimg.com/48/48/people" style="border-radius: 70%;" /></div>
+                    <div class="comment-item-container slds-border_bottom slds-p-bottom_large slds-p-top_x-large">
+                        <div class="slds-m-bottom_large">
+                            <div><img class="comment-user-img" src="https://placeimg.com/48/48/people" /></div>
                             <div class="slds-m-left_medium">
-                                <div style="font-size: 1.3rem; font-weight: bold;">{! v.post.CreatorName__c }</div>
+                                <div class="comment-creator">{! v.post.CreatorName__c }</div>
                                 <div>{! v.post.CurrentDate__c }</div>
                             </div>
                         </div>
-                        <div style="font-size: 1.2rem;">안녕하세요! 글 잘 봤습니다 :)
+                        <div class="comment-contents">안녕하세요! 글 잘 봤습니다 :)
                             혹시 이 프로젝트 구현에 걸린 기간 알 수 있을까요?
                             저도 포트폴리오 웹 제작 계획하고 있는데 하루에 어느정도 시간을 쏟으셨는지 궁금하네요 ㅎㅎ
                         </div>
                     </div>
-                    <div class="slds-border_bottom slds-p-bottom_large slds-p-top_x-large" style="border-color: #E9ECEF;">
-                        <div class="slds-m-bottom_large" style="display: flex;">
-                            <div><img src="https://placeimg.com/48/48/people" style="border-radius: 70%;" /></div>
+                    <div class="comment-item-container slds-border_bottom slds-p-bottom_large slds-p-top_x-large">
+                        <div class="slds-m-bottom_large">
+                            <div><img class="comment-user-img" src="https://placeimg.com/48/48/people" /></div>
                             <div class="slds-m-left_medium">
-                                <div style="font-size: 1.3rem; font-weight: bold;">{! v.post.CreatorName__c }</div>
+                                <div class="comment-creator">{! v.post.CreatorName__c }</div>
                                 <div>{! v.post.CurrentDate__c }</div>
                             </div>
                         </div>
-                        <div style="font-size: 1.2rem;">잘 봤습니다! 제가 만들고 싶은 스타일이라서 흥미롭게 봤네요 ㅎㅎ 부드러운 애니메이션 멋지네요.
+                        <div class="comment-contents">잘 봤습니다! 제가 만들고 싶은 스타일이라서 흥미롭게 봤네요 ㅎㅎ 부드러운 애니메이션 멋지네요.
                             언급하신대로 저도 모바일 브라우저 이슈 때문에 고민을 많이 하고 있어요.
                             URL Bar랑 하단 Dock 때문에 발생하는 height 문제나, 브라우저 종류마다 조금씩 다른 처리 방법 등... 수많은 모바일 기기와 브라우저에 맞추는 게 정말 어려운 부분인 것 같습니다.
                         </div>

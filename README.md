@@ -1,18 +1,25 @@
-# Salesforce DX Project: Next Steps
+# Velog Clone Project
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Aura Component(FE) + Apex(BE) + SLDS 를 이용한 Velog 클론 프로젝트입니다.
 
-## How Do You Plan to Deploy Your Changes?
+## 기능
+- 회원가입
+- 로그인
+- 로그아웃
+- 게시글 작성, 삭제, 출력
+- Dropdown, Dynamic Navigation
+- 등등 게시글의 전반적인 동작
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## 개선해야 할 사항
+- 토큰 생성
+- 비밀번호 암호화
+- 댓글
+- 게시글 수정
+- 회원정보 수정
+- 회원 탈퇴
+- 사진 및 이미지 처리
+- 등등 개선해야 할 사항이 많습니다.
 
-## Configure Your Salesforce DX Project
+## 앞으로..
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+애초에 Aura Component에 익숙해지기 위해 사용했던 프로젝트이기도 하고 Aura 보다는 LWC를 이용해야하기 때문에 추가적으로 무언가 하지는 않습니다.

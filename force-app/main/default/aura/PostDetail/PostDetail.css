@@ -1,14 +1,78 @@
 .THIS {
 }
 
-.THIS .slds-panel__body > div {
+.THIS .slds-grid {
+    color: black; 
+    margin-top: 4rem; 
+    display: flex;
+    justify-content: center;
+}
+
+.THIS .title {
+    font-size: 3rem; 
+    font-weight: bolder;
+}
+
+.THIS .creator-name {
+    font-size: 1rem;
+}
+
+.THIS .created-date {
+    color: gray;
+}
+
+.THIS .section-contents {
+    font-size: 1rem;
+    padding-bottom: 5rem; 
+    border-color: #E9ECEF;
+}
+
+.THIS .button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.THIS .button-container > div {
     cursor: pointer;
 }
 
-.THIS .slds-panel__body > div:hover {
-    color: black;
+.THIS .comment-label {
+    font-size: 1.2rem; 
+    font-weight: bold;
 }
 
+.THIS .comment-button {
+    width: 100%; 
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.THIS .comment-button > button {
+    color: white; 
+    font-weight: 600;
+}
 .THIS .slds-input {
     --slds-c-input-color-border: #F1F3F5;
+    height: 3rem;
+}
+
+.THIS .comment-item-container {
+    border-color: #E9ECEF;
+}
+
+.THIS .comment-item-container > div:first-child {
+    display: flex;
+}
+
+.THIS .comment-user-img {
+    border-radius: 70%;
+}
+
+.THIS .comment-creator {
+    font-size: 1.3rem; 
+    font-weight: bold;
+}
+
+.THIS .comment-contents {
+    font-size: 1.2rem;
 }

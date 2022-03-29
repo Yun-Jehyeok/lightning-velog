@@ -2,11 +2,8 @@
     margin-top: 2rem;
 }
 
-.THIS .slds-card {
-    transition: all 0.25s linear;
+.THIS .slds-grid {
+    width: 90%; 
+    margin-left: 5%; 
+    padding: 0;
 }
-
-.THIS .slds-card:hover {
-    margin-top: -10px;
-}
-

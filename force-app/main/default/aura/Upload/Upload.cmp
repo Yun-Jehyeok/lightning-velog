@@ -5,11 +5,11 @@
 
     <aura:handler event="c:store" action="{! c.initValue }" />
     <div>
-        <div style="width: 88%; margin-left: 6%;">
-            <div class="slds-m-top_medium" style="font-size: 1.5rem; font-weight: bolder;">게시글 작성</div>
+        <div class="container">
+            <div class="upload-label slds-m-top_medium">게시글 작성</div>
             <lightning:input class="slds-m-bottom_small" placeholder="제목을 입력하세요" value="{! v.title }" />
             <lightning:inputRichText class="contentBox slds-m-bottom_small" placeholder="내용을 입력하세요" value="{! v.contents }" />
-            <div style="width: 100%; display: flex; justify-content: flex-end;">
+            <div class="submit-button">
                 <lightning:button label="Submit" variant="brand" onclick="{! c.onSubmit }" />
             </div>
         </div>

@@ -1,6 +1,22 @@
 .THIS {
 }
 
+.THIS .container {
+    width: 88%; 
+    margin-left: 6%;
+}
+
+.THIS .upload-label {
+    font-size: 1.5rem; 
+    font-weight: bolder;
+}
+
+.THIS .submit-button {
+    width: 100%; 
+    display: flex; 
+    justify-content: flex-end;
+}
+
 .THIS .contentBox {
     --sds-c-textarea-sizing-min-height: 400px;
 }
