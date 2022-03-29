@@ -8,14 +8,16 @@
 
     <aura:handler name="init" value="{! this }" action="{! c.myInit }" />
     <div class="slds-col slds-size_3-of-12" style="margin-bottom: 2rem;">
-        <article class="slds-card" style="height: 25rem;">
+        <article class="slds-card" style="height: 28rem;">
             <a href="{! '/c/PostDetailPage.app?postId=' + v.postId }" style="color: black; text-decoration: none;">
                 <div class="slds-card__body slds-card__body_inner">
                     <img src="https://placeimg.com/380/200/people" />
                     <div class="content-container">
-                        <div class="title">{! v.title }</div>
-                        <div class="content">
-                            {! v.contents }
+                        <div>
+                            <div class="title">{! v.title }</div>
+                            <div class="content">
+                                {! v.contents }
+                            </div>
                         </div>
                         <div class="date-comment">
                             <div>{! v.date }</div>

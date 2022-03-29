@@ -2,6 +2,7 @@
     <aura:attribute name="isScrollUp" type="Boolean" default="false" />
     <aura:attribute name="isLogin" type="Boolean" default="false" />
     <aura:attribute name="isDropdownOpen" type="Boolean" default="false" />
+    <aura:attribute name="isDropdownOpenForHide" type="Boolean" default="false" />
     <aura:attribute name="userName" type="String" default="이름이 없습니다" />
 
     <aura:handler event="c:store" action="{! c.initValue }" />
@@ -12,7 +13,7 @@
                 <a href="/c/MainPage.app">Y Blog</a>
             </div>
             <aura:if isTrue="{! v.isLogin }">
-                <div class="{! v.isDropdownOpen ? 'slds-dropdown-trigger slds-dropdown-trigger click slds-is-open' : 'slds-dropdown-trigger slds-dropdown-trigger_click slds-is-close'}">
+                <div class="{! v.isDropdownOpen ? 'slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open' : 'slds-dropdown-trigger slds-dropdown-trigger_click slds-is-close'}">
                     <div class="slds-button slds-button_brand" onclick="{! c.openDropdown }">UserName</div>
                     <div class="slds-dropdown">
                         <span class="slds-dropdown__item" role="presentation">
@@ -44,8 +45,8 @@
                 <a href="/c/MainPage.app">Y Blog</a>
             </div>
             <aura:if isTrue="{! v.isLogin }">
-                <div class="{! v.isDropdownOpen ? 'slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open' : 'slds-dropdown-trigger slds-dropdown-trigger_click slds-is-close'}">
-                    <div class="slds-button slds-button_brand" onclick="{! c.openDropdown }">UserName</div>
+                <div class="{! v.isDropdownOpenForHide ? 'slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open' : 'slds-dropdown-trigger slds-dropdown-trigger_click slds-is-close'}">
+                    <div class="slds-button slds-button_brand" onclick="{! c.openDropdownForHide }">UserName</div>
                     <div class="slds-dropdown">
                         <span class="slds-dropdown__item" role="presentation">
                             <a href="/c/MyPage.app">

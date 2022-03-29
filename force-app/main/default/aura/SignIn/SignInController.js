@@ -21,10 +21,13 @@
                 component.set("v.isLogin", true);
 
                 localStorage.setItem("access-token", "dummy-token")
+                localStorage.setItem("userName", response.name)
+                localStorage.setItem("userEmail", response.email)
+                localStorage.setItem("userId", response.userId)
 
-                var appEvent = $A.get("e.c:store");
+                // var appEvent = $A.get("e.c:store");
 
-                appEvent.setParams({ userName: response.name, userEmail: response.email, userId: response.userId });
+                // appEvent.setParams({ userName: response.name, userEmail: response.email, userId: response.userId });
             } else {
                 // component.find().focus();
             }

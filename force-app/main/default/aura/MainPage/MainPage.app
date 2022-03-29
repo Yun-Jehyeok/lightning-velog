@@ -1,4 +1,4 @@
-<aura:application extends="force:slds">
+<aura:application extends="force:slds" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:html tag="style">
         html {
             background-color: #F8F9FA;

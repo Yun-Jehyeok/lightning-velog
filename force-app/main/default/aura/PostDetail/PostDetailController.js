@@ -9,6 +9,7 @@
             var res = data.getReturnValue();
 
             component.set("v.post", res);
+            component.set("v.userId", localStorage.getItem("userId"));
         })
 
         $A.enqueueAction(action);

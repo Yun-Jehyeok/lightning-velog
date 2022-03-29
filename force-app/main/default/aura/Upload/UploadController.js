@@ -16,8 +16,8 @@
         action.setParams({
             "title": title,
             "contents": contents,
-            "creator": "0015j00000aqcf4AAA",
-            "creatorName": "jehyeok",
+            "creator": localStorage.getItem("userId"),
+            "creatorName": localStorage.getItem("userName"),
             "currentDate": dt
         });
 
