@@ -1,3 +1,9 @@
 <aura:component>
-    <div>mypage</div>
-</aura:component>	
+    <div>
+        <div style="width: 100%; min-height: 100vh; background-color: #F8F9FA; display: flex; justify-content: center;">
+            <div style="width: 80%; background-color: white; box-shadow: 0 5px 20px -5px rgb(0 0 0 / 7%); ">
+                <button>회원 탈퇴하기</button>
+            </div>
+        </div>
+    </div>
+</aura:component>

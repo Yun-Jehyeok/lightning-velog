@@ -4,9 +4,9 @@
         component.set("v.contents", String(component.get("v.post.Contents__c")).replace(
             /<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi,
             ''
-        ));
+        ).slice(0, 80));
         component.set("v.date", String(component.get("v.post.CurrentDate__c")));
-
-        console.log(component.get("v.post.Name"));
+        component.set("v.creator", component.get("v.post.CreatorName__c"));
+        component.set("v.postId", component.get("v.post.Id"));
     }
 })
